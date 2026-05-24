@@ -46,8 +46,15 @@
         }
 
         #resultadoSoma, #resultadoSub, #resultadoMult, #resultadoDiv{
-            margin-bottom: 20px;
+            margin-top: 10px;
             font-size: 1.2em;
+        }
+
+        #limpar{
+            background-color: #e40f25;
+            color: white;
+            width: 100px;
+            margin: auto;
         }
     </style>
 
@@ -68,6 +75,8 @@
 
         <button onclick="dividir()" type="button">Dividir</button>
         <div id="resultadodivisao"></div>
+
+        <button onclick="limpar()" type="button" id="limpar">Limpar</button>
     </div>
 
     <script>
@@ -104,6 +113,15 @@
                 var n2 = parseFloat(num2.value);
                 var divisao = n1 / n2;
                 resultadoDiv.innerHTML = "<p>O resultado é: " + divisao + "</p>";
+            }
+
+            function limpar(){
+                num1.value = "";
+                num2.value = "";
+                resultadoSoma.innerHTML = "";
+                resultadoSub.innerHTML = "";
+                resultadoMult.innerHTML = "";
+                resultadoDiv.innerHTML = "";
             }
     </script>
 </body>
