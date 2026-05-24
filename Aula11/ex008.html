@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #calc{
+            background-color: #13c2e0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        input#num1, input#num2{
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #operacoes{
+            display: flex;
+            justify-content: space-around;
+            align-content: space-evenly;
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #resultadoSoma, #resultadoSub, #resultadoMult, #resultadoDiv{
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        #limpar{
+            background-color: #e40f25;
+            color: white;
+            width: 100px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="calc">
+        <h1>Calculadora</h1>
+        <input type="number" name="num1" id="num1" placeholder="Digite o primeiro número">
+
+        <div id="operacoes">
+            <input type="radio" name="operacao" id="soma" value="soma">
+            <label for="soma">Somar</label>
+            <input type="radio" name="operacao" id="subtracao" value="subtracao">
+            <label for="subtracao">Subtrair</label>
+            <input type="radio" name="operacao" id="multiplicacao" value="multiplicacao">
+            <label for="multiplicacao">Multiplicar</label>
+            <input type="radio" name="operacao" id="divisao" value="divisao">
+            <label for="divisao">Dividir</label>
+        </div>
+
+        <input type="number" name="num2" id="num2" placeholder="Digite o segundo número">
+
+        <button onclick="calcular()" type="button">Calcular</button>
+
+        <div id="resultado"></div>
+
+        <button onclick="limpar()" type="button" id="limpar">Limpar</button>
+    </div>
+
+    <script>
+        var num1 = document.querySelector('#num1');
+        var num2 = document.querySelector('#num2');
+        var resultado = document.querySelector('#resultado');
+
+        function calcular(){
+            var n1 = parseFloat(num1.value);
+            var n2 = parseFloat(num2.value);
+            var operacao = document.querySelector('input[name="operacao"]:checked').value;
+            var resultadoCalculo;
+
+            if(operacao === "soma"){
+                resultadoCalculo = n1 + n2;
+            } else if(operacao === "subtracao"){
+                resultadoCalculo = n1 - n2;
+            } else if(operacao === "multiplicacao"){
+                resultadoCalculo = n1 * n2;
+            } else if(operacao === "divisao"){
+                resultadoCalculo = n1 / n2;
+            }
+
+            resultado.innerHTML = "<p>O resultado é: " + resultadoCalculo + "</p>";
+        }
+
+        function limpar(){
+            num1.value = "";
+            num2.value = "";
+            resultado.innerHTML = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        #nacionalidade{
+            background-color: #13c2e0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input{
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #resultadoPais{
+            margin-top: 7px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="nacionalidade">
+        <h1>Governo Federal</h1>
+        <p> Informe o seu país de origem: </p>
+        <input type="text" id="pais" placeholder="Digite o nome do país">
+        <button type="button" id="verificarPais" onclick="verificar()">Verificar País</button>
+        <div id="resultadoPais"></div>
+    </div>
+
+    <script>
+        function verificar(){
+            var país = document.querySelector('#pais')
+            var verificarPais = document.querySelector('#verificarPais')
+            var resultadoPais = document.querySelector('#resultadoPais')
+
+            if(pais.value == 'Brasil'){
+                resultadoPais.innerHTML = "<p>Você é Brasileiro!</p>"
+            } else{
+                resultadoPais.innerHTML = "<p>Você é Estrangeiro!</p>"
+            }
+        }
+    </script>
+</body>
+</html>
