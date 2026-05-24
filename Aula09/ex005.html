@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(12, 112, 206);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>DOM - Document Object Model</h1>
+    <p class="msg">Aprendendo DOM</p>
+
+    <script>
+        p1 = document.querySelector('.msg')
+
+        p1.innerHTML = 'Aprendendo DOM - JavaScript'
+        p1.style.color = 'yellow'
+        p1.style.width = '400px'
+        p1.style.backgroundColor = 'black'
+        p1.style.padding = '10px'
+        p1.style.borderRadius = '10px'
+        p1.style.textAlign = 'center'
+    </script>
+</body>
+</html>
