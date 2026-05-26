@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <script src="script2.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <main>
+        <div>
+            <p>Digite o ano de nascimento: 
+            <input type="number" name="txtano" id="txtano" placeholder="Ano de nascimento"> </p>
+
+            <p>Sexo: 
+            <input type="radio" name="sexo" id="masculino" value="M" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexo" id="feminino" value="F" checked>
+            <label for="feminino">Feminino</label>
+            </p>
+
+            <p><button type="button" onclick="verificar()">Verificar</button></p>
+        </div>
+
+        <div id="res">
+             
+
+        </div>
+
+        <div id="img"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
