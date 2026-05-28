@@ -14,11 +14,19 @@ function contar() {
         } 
         contando.innerHTML += ` \u{1F3C1}`
         
-    } else {
+     } else{
+        if (inicio > fim) {
         contando.innerHTML = 'Contando: '
-        for (var c = inicio; c <= fim; c += passo) {
+        for (var c = inicio; c >= fim; c -= passo) {
                 contando.innerHTML += ` ${c} \u{1F449}`
         }
         contando.innerHTML += ` \u{1F3C1}`
-    }
+     } else {
+        contando.innerHTML = 'Contando: '
+        for (var c = inicio; c <= fim; c += passo) {
+            contando.innerHTML += ` ${c} \u{1F449}`
+        }
+        contando.innerHTML += ` \u{1F3C1}`
+     }
+   }
 }
