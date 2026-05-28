@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <script src="script2.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <main>
+        <div id="colocar">
+            <p>
+                Número:
+                <input type="number" name="numero" id="numero" min="0">
+            </p>
+
+            <button onclick="criar()">Gerar Tabuada</button>
+        </div>
+
+        <div id="resultado">
+            <select name="tabuada" id="tabuada" min="0" readonly>
+                <option value="">Tabuada</option>
+            </select>
+        </div>
+    </main>
+
+</body>
+</html>

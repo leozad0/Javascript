@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <main>
+
+        <div class="titulo">
+            <h1>Contador</h1>
+        </div>
+
+        <div class="contador">
+            <p>
+                Início:
+                <input type="number" name="inicio" id="inicio" min="0">
+            </p>
+
+            <p>
+                Fim:
+                <input type="number" name="fim" id="fim" min="0">
+            </p>
+
+            <p>
+                Passo:
+                <input type="number" name="passo" id="passo" min="0">
+            </p>
+
+            <button onclick="contar()">Contar</button>
+        </div>
+
+        <div>
+            <p id="contando"></p>
+        </div>
+    </main>
+
+</body>
+</html>
