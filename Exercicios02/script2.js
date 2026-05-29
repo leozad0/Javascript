@@ -7,7 +7,7 @@ function criar(){
         return
     } else {
     tabuada.innerHTML = ''
-    for(var i = 0; i <=12; i++){
+    for(var i = 0; i <= 12; i++){
         tabuada.innerHTML += `<option>${num} x ${i} = ${num*i}</option>`
     }
   }
